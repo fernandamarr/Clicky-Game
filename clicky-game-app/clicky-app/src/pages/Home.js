@@ -11,12 +11,30 @@ class Home extends Component {
 
   state = {
     image: "",
+    topScore: 0,
+    currentScore: 0,
     match: false,
-    matchCount: 0
+    clicked: []
   }
 
-  handleBtnClick() {
-    console.log('Button was clicked!')
+  handleBtnClick = event => {
+    const btnType = event.target.attributes.getNamedItem("data-value").value;
+    switch (btnType) {
+      case "mario":
+      console.log("i am mario");
+      break;
+      case "koopa":
+      console.log("i am koopa");
+      break;
+      case "peach":
+      console.log("i am peach");
+      break;
+      case "yoshi":
+      console.log("i am yoshi");
+      break;
+      default:
+      console.log("none selected")
+    }
 }
 
 render() {
@@ -25,16 +43,16 @@ render() {
         <Container style={{ marginTop: 30 }}>
           <Row>
             <Col size="md-3">
-            <div id="img" onClick={this.handleBtnClick}><img id="click" className="click-image"  src={mario} alt="Mario" /></div>
+            <div id="img" onClick={this.handleBtnClick} ><img id="click" data-value="mario" className="click-image"  src={mario} alt="Mario" /></div>
             </Col>
             <Col size="md-3">
-            <div id="img" onClick={this.handleBtnClick}><img id="click" className="click-image" src={koopatroopa} alt="Koopa Troopa" /></div>
+            <div id="img" onClick={this.handleBtnClick} ><img id="click" data-value="koopa" className="click-image" src={koopatroopa} alt="Koopa Troopa" /></div>
             </Col>
             <Col size="md-3">
-            <div id="img" onClick={this.handleBtnClick}><img id="click" className="click-image" src={peach} alt="Peach" /></div>
+            <div id="img" onClick={this.handleBtnClick}><img id="click" data-value="peach" className="click-image" src={peach} alt="Peach" /></div>
             </Col>
             <Col size="md-3">
-            <div id="img" onClick={this.handleBtnClick}><img id="click" className="click-image" src={yoshi} alt="Yoshi" /></div>
+            <div id="img" onClick={this.handleBtnClick}><img id="click" data-value="yoshi" className="click-image" src={yoshi} alt="Yoshi" /></div>
             </Col>
           </Row>
         
