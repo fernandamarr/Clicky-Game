@@ -13,26 +13,33 @@ class App extends Component {
     cards,
     score: 0,
     topscore: 0,
-    clicked: []
+    clicked: [],
   }
 
   handleClick = id => {
     // if button is clicked
     if (this.state.clicked.indexOf(id) === -1) {
       // push it to clicked array
-      this.state.clicked.push(id);
+      var clicked = this.state.clicked.push(id);
       // increment score
       this.setState(
-        {score: this.state.score + 1}
-        // {cards: (Math.floor(Math.random() * 5))}
+        {score: this.state.score + 1});
+        shuffle(this.state.cards);
+        console.log(this.state.clicked);
+    }
+    if (!clicked) {
+      alert("You clicked that Mario Character already! Try again?");
+      this.setState(
+        {score: 0}
+        );  
+        this.setState(
+          {clicked: []}
+        );
+        this.setState(
+          {topscore: this.state.score}
         );
         shuffle(this.state.cards);
-      console.log(this.state.clicked);
-      console.log("I have been clicked");
-
-
-    }      
-    
+    }
     // shuffle cards
     function shuffle(card) {
       for(let i = cards.length -1; i > 0; i--) {
