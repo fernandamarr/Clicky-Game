@@ -7,10 +7,6 @@ import Row from "./components/Row";
 import Card from "./components/Card"
 import cards from "./cards.json";
 
-
-// import logo from './logo.svg';
-import './App.css';
-
 class App extends Component {
 
   state = {
