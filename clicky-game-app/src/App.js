@@ -21,14 +21,30 @@ class App extends Component {
   }
 
   handleClick = id => {
-    for (let i = this.state.cards.length -1; i > 0; i--) {
-      if (this.state.clicked.indexOf(i) === -1) {
-        this.setState({
-          score: 1
-        })
-        console.log("I have been clicked")
+    // if button is clicked
+    if (this.state.clicked.indexOf(id) === -1) {
+      // push it to clicked array
+      this.state.clicked.push(id);
+      // increment score
+      this.setState(
+        {score: this.state.score + 1}
+        // {cards: (Math.floor(Math.random() * 5))}
+        );
+        shuffle(this.state.cards);
+      console.log(this.state.clicked);
+      console.log("I have been clicked");
+
+
+    }      
+    
+    // shuffle cards
+    function shuffle(card) {
+      for(let i = cards.length -1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [card[i], card[j]] = [card[j], card[i]];
       }
-    }   
+      return card;
+    }
 }
 
 render() {
