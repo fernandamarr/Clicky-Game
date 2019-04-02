@@ -13,9 +13,9 @@ function Navbar(props) {
         </li>
       </ul>
       <span className="navbar-text">
-        Score: {props.currentScore} 
+        Score: {props.score} 
         <br></br>
-        Highscore: {props.topScore}
+        Highscore: {props.topscore}
       </span>
     </nav> 
     <header>
