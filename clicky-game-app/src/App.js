@@ -14,7 +14,7 @@ function App() {
       <div>
         <Navbar />
         <Wrapper>
-          <Route basename="/" /> <link to="/home/"  />
+          <Route basename="/" component={Home} />
         </Wrapper>
         <Footer />
       </div>
