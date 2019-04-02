@@ -39,5 +39,25 @@
         "id": 8,
         "name": "Toadette",
         "image": "https://upload.wikimedia.org/wikipedia/en/thumb/2/21/Toadette_%28Mario%29.png/220px-Toadette_%28Mario%29.png"
+    },
+    {
+        "id": 9,
+        "name": "Toadsworth",
+        "image": "https://vignette.wikia.nocookie.net/mariokart/images/6/65/Toadsworth.jpg/revision/latest?cb=20110904030936"
+    },
+    {
+        "id": 10,
+        "name": "Waluigi",
+        "image": "https://upload.wikimedia.org/wikipedia/en/4/46/Waluigi.png"
+    },
+    {
+        "id": 11,
+        "name": "Goomba",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVyKN3RBJLp8tp-ShrqCCdtfi-M3bTzpFmolrixoMMzlsyxkDE_Q"
+    },
+    {
+        "id": 12,
+        "name": "Rosalina",
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/e/ee/RosalinaMP10.png/220px-RosalinaMP10.png"
     }
 ]
