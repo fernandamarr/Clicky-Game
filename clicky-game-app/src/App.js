@@ -20,8 +20,15 @@ class App extends Component {
     clicked: []
   }
 
-  handleBtnClick = id => {
-   console.log(id)
+  handleClick = id => {
+    for (let i = this.state.cards.length -1; i > 0; i--) {
+      if (this.state.clicked.indexOf(i) === -1) {
+        this.setState({
+          score: 1
+        })
+        console.log("I have been clicked")
+      }
+    }   
 }
 
 render() {
@@ -33,7 +40,7 @@ render() {
           <Row>
           {this.state.cards.map(card => (
           <Card
-            // clickCount={this.clickCount}
+            handleClick={this.handleClick}
             id={card.id}
             key={card.id}
             image={card.image}
