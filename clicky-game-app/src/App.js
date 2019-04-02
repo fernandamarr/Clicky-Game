@@ -14,7 +14,7 @@ function App() {
       <div>
         <Navbar />
         <Wrapper>
-          <Route exact path="/" component={Home} />
+          <Route basename="/" /> <link to="/home/"  />
         </Wrapper>
         <Footer />
       </div>
