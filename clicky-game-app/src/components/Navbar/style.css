@@ -14,6 +14,10 @@
     font-weight: 800;
 }
 
+.navbar-text {
+    margin-right: 70px;
+}
+
 #description {
     margin: 250px;
 }

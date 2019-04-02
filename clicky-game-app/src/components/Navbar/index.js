@@ -2,19 +2,20 @@ import React from "react";
 // import { Link } from "react-router-dom";
 import "./style.css";
 
-function Navbar() {
+function Navbar(props) {
   return (
   <div>
     <nav className="navbar navbar-expand-lg">
     <a className="navbar-brand" href="/">Super Mario Clicky Game</a>
       <ul className="navbar-nav mr-auto">
         <li className="nav-item active">
-          <div id="description">Click an image to begin!</div>
+          <div id="description">{props.children}</div>
         </li>
       </ul>
       <span className="navbar-text">
-        Score:
-        Top Score:
+        Score: {props.currentScore} 
+        <br></br>
+        Highscore: {props.topScore}
       </span>
     </nav> 
     <header>
