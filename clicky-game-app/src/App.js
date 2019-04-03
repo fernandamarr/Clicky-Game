@@ -25,20 +25,21 @@ class App extends Component {
       this.setState(
         {score: this.state.score + 1});
         shuffle(this.state.cards);
-        console.log(this.state.clicked);
+        // console.log(this.state.clicked);
     }
     if (!clicked) {
-      alert("You clicked that Mario Character already! Try again?");
-      this.setState(
-        {score: 0}
-        );  
-        this.setState(
-          {clicked: []}
-        );
-        this.setState(
-          {topscore: this.state.score}
-        );
-        shuffle(this.state.cards);
+      alert("You clicked that character already! Try again?");
+      this.setState({score: 0});  
+      this.setState({clicked: []});
+      this.setState({topscore: this.state.score});
+      shuffle(this.state.cards);
+    }
+    if(this.state.score === 11) {
+      alert("You win! Play again?");
+      this.setState({score: 0});  
+      this.setState({clicked: []});
+      this.setState({topscore: 12});
+      shuffle(this.state.cards);
     }
     // shuffle cards
     function shuffle(card) {
