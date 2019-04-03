@@ -31,10 +31,12 @@ class App extends Component {
       alert("You clicked that character already! Try again?");
       this.setState({score: 0});  
       this.setState({clicked: []});
+      if (this.state.score > this.state.topscore) {
       this.setState({topscore: this.state.score});
+    }
       shuffle(this.state.cards);
     }
-    if(this.state.score === 11) {
+    if (this.state.score === 11) {
       alert("You win! Play again?");
       this.setState({score: 0});  
       this.setState({clicked: []});
