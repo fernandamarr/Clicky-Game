@@ -6,7 +6,7 @@ function Navbar(props) {
   return (
   <div>
     <nav className="navbar navbar-expand-lg">
-    <a className="navbar-brand" href="/">Super Mario Clicky Game</a>
+    <a className="navbar-brand" href="http://www.fernandamarroquin.com/Clicky-Game/">Super Mario Clicky Game</a>
       <ul className="navbar-nav mr-auto">
         <li className="nav-item active">
           <div id="description">{props.children}</div>
